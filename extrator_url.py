@@ -85,20 +85,3 @@ def converter(origem, destino, quantidade):
         print(f"Câmbio de {moeda_origem} para {moeda_destino} não está disponível.")        
 
 #######################################################################################
-
-
-
-# Faz a requisição do objeto
-# Define a URL e o parametro
-# Mostra o resultado
-url = "https://bytebank.com/cambio?moedaDestino=real&quantidade=100&moedaOrigem=dolar"
-extrator_url = ExtratorURL(url)
-print(extrator_url)
-
-
-# Desafio
-valor_dolar = 5.50
-moeda_origem = extrator_url.get_valor_parametro("moedaOrigem")
-moeda_destino = extrator_url.get_valor_parametro("moedaDestino")
-valor_quantidade = int(extrator_url.get_valor_parametro("quantidade"))
-converter(moeda_origem, moeda_destino, valor_quantidade)
